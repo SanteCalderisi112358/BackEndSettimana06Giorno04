@@ -20,8 +20,8 @@ public class Adapter implements DataSource {
 	public int getEta() {
 		LocalDate dataNascita = infoUtente.getDataDiNascita().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 		LocalDate oggi = LocalDate.now();
-		long years = ChronoUnit.YEARS.between(dataNascita, oggi);
-		return (int) years;
+		long eta = ChronoUnit.YEARS.between(dataNascita, oggi);
+		return (int) eta;
 	}
 
 }
